@@ -18,5 +18,12 @@ module.exports = {
     // 在webpack4.x中新增特性： 约定大于配置；约定默认的打包路径是 src -> index.js
     plugins: [
         htmlPlugin
-    ]
+    ],
+    // webpack默认只能打包 .js 后缀的文件，所以要配置第三方loader
+    module: {
+        // 第三方模块配置规则
+        rules: [
+            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ } // 一定要添加exclude排除项
+        ]
+    }
 }

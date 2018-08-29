@@ -25,5 +25,9 @@ module.exports = {
         rules: [
             { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ } // 一定要添加exclude排除项
         ]
+    },
+    // 配置省略格式的后缀名
+    resolve: {
+        extensions: ['.js', '.jsx', '.json']
     }
 }

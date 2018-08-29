@@ -4,4 +4,6 @@ import React from 'react'
 // react-dom这个包：负责render
 import ReactDOM from 'react-dom'
 
-const ele = <div>hhha</div>
+import Hello from './components/Hello'
+
+ReactDOM.render(<Hello />, document.getElementById("app"))

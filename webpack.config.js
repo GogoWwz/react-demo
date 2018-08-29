@@ -28,6 +28,9 @@ module.exports = {
     },
     // 配置省略格式的后缀名
     resolve: {
-        extensions: ['.js', '.jsx', '.json']
+        extensions: ['.js', '.jsx', '.json'],
+        alias: {
+            '@': path.join(__dirname, '/src')
+        }
     }
 }

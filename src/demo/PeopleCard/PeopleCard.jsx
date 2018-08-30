@@ -1,7 +1,7 @@
 // react这个包：创建组件、虚拟dom、声明周期
 import React from 'react'
 import PeopleItem from '@/demo/PeopleCard/PeopleItem'
-import styles from './styles'
+import classes from '@/css/peoplecard.css'
 
 class PeopleCard extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class PeopleCard extends React.Component {
     render() {
         return (
             <div>
-                <h1 style={styles.title}>名侦探柯南任务表</h1>
+                <h1 className="m-title">名侦探柯南任务表</h1>
                 {this.state.peopleList.map(item => <PeopleItem key={item.id} {...item} />)}
             </div>
         )

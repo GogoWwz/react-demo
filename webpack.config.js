@@ -23,7 +23,8 @@ module.exports = {
     module: {
         // 第三方模块配置规则
         rules: [
-            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ } // 一定要添加exclude排除项
+            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ }, // 一定要添加exclude排除项
+            { test: /\.css$/, use: ['style-loader', 'css-loader']}
         ]
     },
     // 配置省略格式的后缀名

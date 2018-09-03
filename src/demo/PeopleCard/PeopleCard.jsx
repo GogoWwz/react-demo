@@ -1,7 +1,7 @@
 // react这个包：创建组件、虚拟dom、声明周期
 import React from 'react'
 import PeopleItem from '@/demo/PeopleCard/PeopleItem'
-import classes from '@/css/peoplecard.css'
+import classes from '@/css/peoplecard.scss'
 
 console.log(classes)
 class PeopleCard extends React.Component {

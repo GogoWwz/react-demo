@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from '@/css/peoplecard.css'
+import classes from '@/css/peoplecard.scss'
 
 function PeopleItem(props) {
     return (

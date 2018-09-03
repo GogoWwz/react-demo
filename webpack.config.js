@@ -25,6 +25,7 @@ module.exports = {
         rules: [
             { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ }, // 一定要添加exclude排除项
             { test: /\.css$/, use: ['style-loader', 'css-loader?modules&localIdentName=[local]-[hash:8]']} // css模块化（只针对类名或id，标签选择器不会模块化）
+            { test: /\.ttf|woff|woff2|eot|svg$/, use: 'url-loader'} // 字体文件打包处理配置
         ]
     },
     // 配置省略格式的后缀名

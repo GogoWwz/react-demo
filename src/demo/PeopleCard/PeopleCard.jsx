@@ -3,6 +3,7 @@ import React from 'react'
 import PeopleItem from '@/demo/PeopleCard/PeopleItem'
 import classes from '@/css/peoplecard.css'
 
+console.log(classes)
 class PeopleCard extends React.Component {
     constructor(props) {
         super(props)
@@ -19,7 +20,7 @@ class PeopleCard extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="m-title">名侦探柯南任务表</h1>
+                <h1 className={classes["m-title"]}>名侦探柯南任务表</h1>
                 {this.state.peopleList.map(item => <PeopleItem key={item.id} {...item} />)}
             </div>
         )

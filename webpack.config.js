@@ -24,7 +24,7 @@ module.exports = {
         // 第三方模块配置规则
         rules: [
             { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ }, // 一定要添加exclude排除项
-            { test: /\.css$/, use: ['style-loader', 'css-loader']}
+            { test: /\.css$/, use: ['style-loader', 'css-loader?modules&localIdentName=[local]-[hash:8]']} // css模块化（只针对类名或id，标签选择器不会模块化）
         ]
     },
     // 配置省略格式的后缀名

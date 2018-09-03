@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from './styles'
+import classes from '@/css/peoplecard.css'
 
 function PeopleItem(props) {
     return (
-        <div style={styles.item}>
-            <h2 style={styles.user}>人物：{props.people}</h2>
-            <p style={styles.content}>人物人物：{props.alias}</p>
+        <div className={classes["m-item"]}>
+            <h2 className={classes["m-user"]}>人物：{props.people}</h2>
+            <p className={classes["m-content"]}>人物人物：{props.alias}</p>
         </div>
     )
 }

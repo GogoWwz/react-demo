@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
 
 // 创建插件示例对象
 const htmlPlugin = new HtmlWebpackPlugin({
@@ -7,6 +8,11 @@ const htmlPlugin = new HtmlWebpackPlugin({
     template: path.join(__dirname, './src/index.html'),
     //目标文件
     filename: "index.html"
+})
+
+// 创建stylelint插件示例对象
+const stylelintPlugin = new StylelintWebpackPlugin({
+    files: ['src/**/*.s?(a|c)ss']
 })
 
 // 向外暴露一个一个webpack配置文件
@@ -17,7 +23,8 @@ module.exports = {
     mode: "development",
     // 在webpack4.x中新增特性： 约定大于配置；约定默认的打包路径是 src -> index.js
     plugins: [
-        htmlPlugin
+        htmlPlugin,
+        stylelintPlugin
     ],
     // webpack默认只能打包 .js 后缀的文件，所以要配置第三方loader
     module: {

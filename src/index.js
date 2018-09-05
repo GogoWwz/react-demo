@@ -4,6 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // import Hello from '@/components/Hello'
-import PeopleCard from '@/demo/PeopleCard/PeopleCard'
+// import PeopleCard from '@/demo/PeopleCard/PeopleCard'
+import Home from '@/views/Home/Home'
 
-ReactDOM.render(<PeopleCard />, document.getElementById("app"))
+ReactDOM.render(<Home />, document.getElementById("app"))

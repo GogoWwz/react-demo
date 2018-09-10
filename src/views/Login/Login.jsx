@@ -1,9 +1,12 @@
 import React from 'react'
+import loginClasses from './login.scss'
 
 class Login extends React.Component {
     render() {
         return (
-            <h1>登录页</h1>
+            <div className={[loginClasses['m-login']].join(" ")}>
+            
+            </div>
         )
     }
 }

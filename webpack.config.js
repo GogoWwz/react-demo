@@ -38,6 +38,8 @@ module.exports = {
             { test: /\.css$/, use: ['style-loader', 'css-loader']}, 
             // 配置字体文件打包处理
             { test: /\.ttf|woff|woff2|eot|svg$/, use: 'url-loader'},
+            // 图片打包配置
+            { test: /\.(png|gif|jpg|jpeg|bmp)$/i, use: "url-loader?limit=8192&name=images/[hash:8].[name].[ext]" },
             // 打包处理scss并模块化（只针对类名或id，标签选择器不会模块化)
             { test: /\.scss$/, use: ['style-loader', 'css-loader?modules&localIdentName=[local]-[hash:8]', 'sass-loader']}
         ]
@@ -46,7 +48,8 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
         alias: {
-            '@': path.join(__dirname, '/src')
+            '@': path.join(__dirname, '/src'),
+            '@images': path.join(__dirname, '/src/assets/images')
         }
     }
 }

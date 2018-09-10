@@ -4,6 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // 引入全局css
 import 'antd/dist/antd.css'
+import '@/assets/css/reset.css'
 
 // import Hello from '@/components/Hello'
 // import PeopleCard from '@/demo/PeopleCard/PeopleCard'

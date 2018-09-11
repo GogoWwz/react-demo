@@ -10,6 +10,7 @@ module.exports = {
             "jsx": true
         }
     },
+    "parser": "babel-eslint",
     "rules": {
         // 允许开发环境使用debugger
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
